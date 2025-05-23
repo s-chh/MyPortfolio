@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Chhabra - Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="index.html" class="brand-link">Sachin Chhabra</a></div>
+        <ul class="nav-links">
+            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="experience.html"><i class="fas fa-briefcase"></i> Work Experience</a></li>
+            <li><a href="research.html"><i class="fas fa-microscope"></i> Research</a></li>
+            <li><a href="projects.html"><i class="fas fa-code-branch"></i> Projects</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Sachin Chhabra</h1>
+                <div class="typing-text">
+                    <span class="typed"></span>
+                </div>
+                <div class="cta-buttons">
+                    <a href="assets/Resume_Sachin_Chhabra.pdf" class="primary-btn" download>Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p class="about-text">
+                    I’m a Machine Learning Scientist with a Ph.D. in Computer Science from Arizona State University. I’ve spent the last few years diving deep into computer vision and training models with limited supervision researching novel techniques in the field of self-supervised learning, domain adaptation etc.
+                </p>
+                <p class="about-text">
+                    Right now, I’m at Wayfair, working on real-world ML problems in e-commerce — from improving recommendations to building scalable forecasting systems. I love turning complex ideas into working systems, whether it's through research, prototyping, or open-source projects. Always up for learning something new or collaborating on cool ideas.
+                </p>
+            </div>
+        </section>
+
+        <!-- New Skills Section -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                
+                <!-- Core Skills -->
+                <div class="skills-category">
+                    <h3><i class="fas fa-star"></i> Core Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-name">Computer Vision</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">Deep Learning</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">Machine Learning</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">Data Science</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">Google Cloud Platform (GCP)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Programming Languages -->
+                <div class="skills-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-name">Python</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">SQL</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">Java</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ML Libraries & Tools -->
+                <div class="skills-category">
+                    <h3><i class="fas fa-tools"></i> Machine Learning Libraries & Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-name">PyTorch</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">OpenCV</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">Scikit-learn</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">NumPy</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">MATLAB</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">Keras</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">TensorFlow</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Deep Learning Techniques -->
+                <div class="skills-category">
+                    <h3><i class="fas fa-brain"></i> Deep Learning Techniques</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-name">Transfer Learning</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">Generative Adversarial Networks (GANs)</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">Transformers</div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-name">Graph Neural Networks (GNNs)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="timeline-section">
+                    <h2>Education & Work Experience Timeline</h2>
+                    <div class="timeline">
+                        <!-- Current Job (Next row, right side) -->
+                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-wayfair-current-section'" style="cursor: pointer;">
+                            <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo" class="timeline-logo">
+                            <div class="timeline-content">
+                                <div class="timeline-date">July 2024 - Present</div>
+                                <h4>Machine Learning Scientist</h4>
+                                <p>Wayfair, Boston, MA</p>
+                                <!-- <p>Working on ML and computer vision applications</p> -->
+                            </div>
+                        </div>
+
+                        <!-- PhD Education (Top Left) -->
+                        <div class="timeline-item education" onclick="window.location.href='education.html#phd-section'" style="cursor: pointer;">
+                            <img src="assets/logos/asu-logo.png" alt="ASU Logo" class="timeline-logo">
+                            <div class="timeline-content">
+                                <div class="timeline-date">Aug 2019 - May 2024</div>
+                                <h4>Ph.D. in Computer Science</h4>
+                                <p>Arizona State University</p>
+                                <!-- <p>Machine Learning and Computer Vision</p> -->
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- Continue with the rest of your timeline items -->
+                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-wayfair-intern2-section'" style="cursor: pointer;">
+                            <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo" class="timeline-logo">
+                            <div class="timeline-date">June 2023 - Aug 2023</div>
+                            <div class="timeline-content">
+                                <h4>Machine Learning Intern</h4>
+                                <p>Wayfair, Boston, MA</p>
+                                <!-- <p>Summer internship focused on ML applications</p> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Work Experience -->
+                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-wayfair-intern1-section'" style="cursor: pointer;">
+                            <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo" class="timeline-logo">
+                            <div class="timeline-date">May 2022 - Aug 2022</div>
+                            <div class="timeline-content">
+                                <h4>Machine Learning Intern</h4>
+                                <p>Wayfair, Boston, MA</p>
+                                <!-- <p>Summer internship in ML and computer vision</p> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Work Experience - Systems Imagination -->
+                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-systems-imagination-intern-section'" style="cursor: pointer;">
+                            <img src="assets/logos/systems-imagination-logo.png" alt="Systems Imagination Logo" class="timeline-logo">
+                            <div class="timeline-date">May 2020 - Aug 2020</div>
+                            <div class="timeline-content">
+                                <h4>Machine Learning Research Intern</h4>
+                                <p>Systems Imagination (Remote)</p>
+                                <!-- <p>Research internship in machine learning</p> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Education - MS (MOVED HERE) -->
+                        <div class="timeline-item education" onclick="window.location.href='education.html#masters-section'" style="cursor: pointer;">
+                            <img src="assets/logos/asu-logo.png" alt="ASU Logo" class="timeline-logo">
+                            <div class="timeline-date">Aug 2017 - May 2019</div>
+                            <div class="timeline-content">
+                                <h4>M.S. in Computer Science</h4>
+                                <p>Arizona State University</p>
+                                <!-- <p>Focus on Computer Science fundamentals and advanced topics</p> -->
+                            </div>
+                        </div>
+                        <!-- Empty space in middle column -->
+                        <div class="timeline-spacer"></div>
+                        
+                        <!-- Empty space in right column to push ML Scientist to next row -->
+                        <div style="grid-column: 3 / 4;"></div>
+                        
+                        <!-- Empty space in left column for second row -->
+                        <div style="grid-column: 1 / 2;"></div>
+                        
+                        <!-- Empty space in middle column -->
+                        <div class="timeline-spacer"></div>
+                                                
+                        <!-- Work Experience - Accenture -->
+                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-accenture-section'" style="cursor: pointer;">
+                            <img src="assets/logos/accenture-logo.png" alt="Accenture Logo" class="timeline-logo">
+                            <div class="timeline-date">Dec 2013 - Jun 2017</div>
+                            <div class="timeline-content">
+                                <h4>Senior Software Engineer</h4>
+                                <p>Accenture, Bangalore, India</p>
+                                <!-- <p>Software development and engineering</p> -->
+                            </div>
+                        </div>
+                        
+                        <!-- Education - BTech -->
+                        <div class="timeline-item education" onclick="window.location.href='education.html#bachelors-section'" style="cursor: pointer;">
+                            <img src="assets/logos/vit-logo.png" alt="VIT Logo" class="timeline-logo">
+                            <div class="timeline-date">2009 - 2013</div>
+                            <div class="timeline-content">
+                                <h4>B.Tech in Computer Science</h4>
+                                <p>VIT University, India</p>
+                                <!-- <p>Foundation in Computer Science and Engineering</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; Sachin Chhabra. All rights reserved.</p>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
