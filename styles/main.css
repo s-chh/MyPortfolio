@@ -1,14 +1,24 @@
 :root {
-    --primary-color: #1a237e;    /* Deep Navy Blue */
-    --secondary-color: #283593;  /* Rich Navy */
-    --accent-color: #1a237e;     /* Changed to Deep Navy Blue */
-    --accent-hover: #283593;     /* For hover states */
-    --text-color: #1e293b;       /* Dark Slate */
-    --light-text: #64748b;       /* Light Slate */
-    --background-color: #f8fafc; /* Light Background */
-    --card-background: #ffffff;  /* White */
-    --hover-color: rgba(26, 35, 126, 0.1); /* Subtle Navy Hover */
-    --input-background: #ffffff; /* For form inputs */
+    --primary-color: #1a237e;
+    /* Deep Navy Blue */
+    --secondary-color: #283593;
+    /* Rich Navy */
+    --accent-color: #1a237e;
+    /* Changed to Deep Navy Blue */
+    --accent-hover: #283593;
+    /* For hover states */
+    --text-color: #1e293b;
+    /* Dark Slate */
+    --light-text: #64748b;
+    /* Light Slate */
+    --background-color: #f8fafc;
+    /* Light Background */
+    --card-background: #ffffff;
+    /* White */
+    --hover-color: rgba(26, 35, 126, 0.1);
+    /* Subtle Navy Hover */
+    --input-background: #ffffff;
+    /* For form inputs */
     --transition: all 0.3s ease;
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     --card-shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.15);
@@ -19,7 +29,8 @@
 /* Global Styles */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 120px; /* Increased from 120px */
+    scroll-padding-top: 120px;
+    /* Increased from 120px */
 }
 
 body {
@@ -197,7 +208,8 @@ body {
 }
 
 /* Section Headers */
-.container h2, .skills-section h2 {
+.container h2,
+.skills-section h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1.5rem;
@@ -207,11 +219,16 @@ body {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 20px; /* Added padding to prevent cut-off */
+    padding-top: 20px;
+    /* Added padding to prevent cut-off */
 }
 
 /* All sections need top padding */
-.education-section, .experience-section, .research-section, .projects-section, .contact-section  {
+.education-section,
+.experience-section,
+.research-section,
+.projects-section,
+.contact-section {
     padding-top: 3rem;
 }
 
@@ -223,7 +240,8 @@ body {
 .timeline {
     display: grid;
     grid-template-columns: 1fr 2px 1fr;
-    gap: 0.75rem 0; /* Reduced from 2rem 0 to create less vertical space */
+    gap: 0.75rem 0;
+    /* Reduced from 2rem 0 to create less vertical space */
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
@@ -249,13 +267,15 @@ body {
 /* Timeline Items */
 .timeline-item {
     position: relative;
-    padding: 1rem 1.2rem 0.6rem 1.2rem; /* Slightly reduced top/bottom padding */
+    padding: 1rem 1.2rem 0.6rem 1.2rem;
+    /* Slightly reduced top/bottom padding */
     background: var(--card-background);
     border-radius: 8px;
     box-shadow: var(--card-shadow);
     border: var(--card-border);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 0; /* Ensure no bottom margin */
+    margin-bottom: 0;
+    /* Ensure no bottom margin */
 }
 
 .timeline-item:hover {
@@ -358,13 +378,18 @@ body {
 
 
 /* Card Styles (Generic) - Standardized for all card types */
-.project-card, .research-card, .experience-card, .education-card, .skill-card {
+.project-card,
+.research-card,
+.experience-card,
+.education-card,
+.skill-card {
     background: var(--card-background);
     border-radius: 8px;
     box-shadow: var(--card-shadow);
     border: var(--card-border);
     border-width: 0.1rem;
-    padding: 1rem 1rem 0.6rem 1rem; /* Reduced from 1rem 1.5rem */
+    padding: 1rem 1rem 0.6rem 1rem;
+    /* Reduced from 1rem 1.5rem */
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     flex: 0 0 auto;
@@ -374,7 +399,11 @@ body {
     padding: 0.6rem
 }
 
-.project-card:hover, .research-card:hover, .experience-card:hover, .education-card:hover, .skill-card:hover {
+.project-card:hover,
+.research-card:hover,
+.experience-card:hover,
+.education-card:hover,
+.skill-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--card-shadow-hover);
     border-color: var(--card-border-hover);
@@ -408,7 +437,8 @@ body {
 /* Card Content */
 .card-content {
     color: var(--text-color);
-    padding-right: 0px; /* Further increased padding to provide more space */
+    padding-right: 0px;
+    /* Further increased padding to provide more space */
     position: relative;
     z-index: 0;
 }
@@ -438,10 +468,13 @@ body {
 .card-content ul li {
     overflow-wrap: break-word;
     word-wrap: break-word;
-    hyphens: none; /* Changed from auto to none to prevent hyphenation */
+    hyphens: none;
+    /* Changed from auto to none to prevent hyphenation */
     max-width: 100%;
-    white-space: nowrap; /* Force the last item not to wrap */
-    overflow: visible; /* Allow content to overflow if needed */
+    white-space: nowrap;
+    /* Force the last item not to wrap */
+    overflow: visible;
+    /* Allow content to overflow if needed */
 }
 
 /* Card Links - Standardized */
@@ -458,7 +491,8 @@ body {
     align-items: center;
     gap: 0.3rem;
     transition: color 0.3s ease;
-    margin-left: auto; /* Push to right */
+    margin-left: auto;
+    /* Push to right */
 }
 
 .card-link:hover {
@@ -501,7 +535,8 @@ body {
 
 .contact-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Changed from auto-fit to exactly 2 columns */
+    grid-template-columns: repeat(2, 1fr);
+    /* Changed from auto-fit to exactly 2 columns */
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -514,7 +549,8 @@ body {
     padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     display: flex;
-    align-items: center; /* Changed from flex-start to center */
+    align-items: center;
+    /* Changed from flex-start to center */
     gap: 1.2rem;
 }
 
@@ -542,22 +578,26 @@ body {
 /* Brand-specific colors for contact icons */
 .contact-card:nth-child(1) .contact-icon {
     color: #ffffff;
-    background-color: #0077b5; /* LinkedIn blue */
+    background-color: #0077b5;
+    /* LinkedIn blue */
 }
 
 .contact-card:nth-child(2) .contact-icon {
     color: #ffffff;
-    background-color: #333333; /* GitHub dark */
+    background-color: #333333;
+    /* GitHub dark */
 }
 
 .contact-card:nth-child(3) .contact-icon {
     color: #ffffff;
-    background-color: #EA4335; /* Gmail red */
+    background-color: #EA4335;
+    /* Gmail red */
 }
 
 .contact-card:nth-child(4) .contact-icon {
     color: #ffffff;
-    background-color: #4285F4; /* Google blue */
+    background-color: #4285F4;
+    /* Google blue */
 }
 
 .contact-icon-link {
@@ -565,13 +605,18 @@ body {
     border: none;
     outline: none;
 }
+
 /* Modify bounce animation for contact icons to go lower */
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(-10px);
     }
+
     50% {
-        transform: translateY(10px); /* Changed from -10px to 10px to make it go down instead of up */
+        transform: translateY(10px);
+        /* Changed from -10px to 10px to make it go down instead of up */
     }
 }
 
@@ -632,14 +677,17 @@ body {
         transform: scaleX(0);
         transform-origin: left;
     }
+
     50% {
         transform: scaleX(1);
         transform-origin: left;
     }
+
     50.1% {
         transform: scaleX(1);
         transform-origin: left;
     }
+
     100% {
         transform: scaleX(0);
         transform-origin: left;
@@ -654,7 +702,8 @@ body {
 .card-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem; /* Increased from 0.3rem for better spacing */
+    gap: 0.5rem;
+    /* Increased from 0.3rem for better spacing */
     margin-top: 1rem;
     margin-bottom: 0rem;
     padding-top: 0.5rem;
@@ -668,7 +717,8 @@ body {
     background: transparent;
     border: none;
     border-radius: 0;
-    padding: 0.2rem 0rem; /* Increased horizontal padding */
+    padding: 0.2rem 0rem;
+    /* Increased horizontal padding */
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -678,8 +728,10 @@ body {
 .card-tag::before {
     content: "•";
     display: inline-block;
-    margin-right: 0.45rem; /* Increased right margin */
-    margin-left: 0.2rem; /* Increased left margin */
+    margin-right: 0.45rem;
+    /* Increased right margin */
+    margin-left: 0.2rem;
+    /* Increased left margin */
     color: var(--accent-color);
     font-size: 0.7rem;
     position: static;
@@ -688,9 +740,10 @@ body {
 
 /* Remove the dot from the first tag */
 /* Add a bit more space to the first tag since it doesn't have a dot */
-.card-tech > *:first-child::before {
+.card-tech>*:first-child::before {
     display: none;
-    padding-left: 0.4rem; /* Increased left padding for first item */
+    padding-left: 0.4rem;
+    /* Increased left padding for first item */
 }
 
 /* Paper and Blog Links */
@@ -717,19 +770,23 @@ body {
 
 /* Skills Section Styles */
 .skills {
-    padding: 0; /* Reduced from 3rem */
+    padding: 0;
+    /* Reduced from 3rem */
     background-color: var(--background-color);
 }
 
 .skills-category {
-    margin-bottom: 1.5rem; /* Reduced from 2.5rem */
+    margin-bottom: 1.5rem;
+    /* Reduced from 2.5rem */
 }
 
 .skills-category h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 1.1rem; /* Reduced from 1.2rem */
-    margin: 0 0 0.5rem 0; /* Reduced bottom margin from 1rem */
+    font-size: 1.1rem;
+    /* Reduced from 1.2rem */
+    margin: 0 0 0.5rem 0;
+    /* Reduced bottom margin from 1rem */
     color: var(--text-color);
     display: flex;
     align-items: center;
@@ -743,14 +800,17 @@ body {
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem; /* Reduced from 1rem */
-    margin-bottom: -2.2rem; /* Reduced from 1rem */
+    gap: 0.5rem;
+    /* Reduced from 1rem */
+    margin-bottom: -2.2rem;
+    /* Reduced from 1rem */
 }
 
 .skill-name {
     font-weight: 500;
     color: var(--text-color);
-    font-size: 0.9rem; /* Reduced from 0.95rem */
+    font-size: 0.9rem;
+    /* Reduced from 0.95rem */
 }
 
 .ongoing-research-list {
@@ -785,7 +845,7 @@ body {
     margin: 0;
     color: var(--light-text);
     font-size: 0.95rem;
-       line-height: 1.5;
+    line-height: 1.5;
 }
 
 .services {
@@ -816,15 +876,15 @@ body {
     .card-header {
         flex-direction: column;
     }
-    
+
     .card-links {
         margin-top: 0.5rem;
     }
-    
+
     .card-tag {
         font-size: 0.8rem;
     }
-    
+
     .card-logo {
         position: relative;
         top: auto;
@@ -832,31 +892,35 @@ body {
         margin-bottom: 1rem;
         max-width: 80px;
     }
-    
+
     .card-content {
         padding-right: 0;
     }
 
     .card-content ul li {
-        white-space: normal; /* Allow wrapping on mobile */
+        white-space: normal;
+        /* Allow wrapping on mobile */
     }
 
     .skills-grid {
-        gap: 0.5rem; /* Reduced from 0.75rem */
+        gap: 0.5rem;
+        /* Reduced from 0.75rem */
     }
-    
+
     .skill-card {
-        padding: 0.5rem 1rem; /* Reduced from 0.75rem 1.25rem */
+        padding: 0.5rem 1rem;
+        /* Reduced from 0.75rem 1.25rem */
     }
 
     .contact-cards {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
     }
-    
+
     .contact-card {
         padding: 1.2rem;
     }
-    
+
     .contact-icon {
         width: 50px;
         height: 50px;
@@ -865,24 +929,28 @@ body {
 }
 
 /* Education cards - light orange */
-.education-card, .timeline-item.education {
+.education-card,
+.timeline-item.education {
     background-color: hsla(21, 100%, 45%, 0.04);
     border-color: rgba(230, 81, 0, 0.5);
 }
 
-.education-card:hover, .timeline-item.education:hover {
+.education-card:hover,
+.timeline-item.education:hover {
     background-color: rgba(230, 81, 0, 0.15);
     border-color: rgba(230, 81, 0, 1.0);
     transform: scale(1.05);
 }
 
 /* Work cards - light green */
-.experience-card, .timeline-item.work {
+.experience-card,
+.timeline-item.work {
     background-color: rgba(76, 175, 80, 0.04);
     border-color: rgba(76, 175, 80, 0.5);
 }
 
-.experience-card:hover, .timeline-item.work:hover {
+.experience-card:hover,
+.timeline-item.work:hover {
     background-color: rgba(76, 175, 80, 0.15);
     border-color: rgba(76, 175, 80, 1.0);
     transform: scale(1.05);
@@ -928,33 +996,40 @@ body {
 .timeline-header {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 1rem; /* Reduced from 1.2rem */
+    font-size: 1rem;
+    /* Reduced from 1.2rem */
     color: var(--text-color);
     text-align: center;
-    margin-bottom: 0.75rem; /* Reduced from 1rem */
-    padding: 0.4rem 0.8rem; /* Reduced from 0.5rem 1rem */
+    margin-bottom: 0.75rem;
+    /* Reduced from 1rem */
+    padding: 0.4rem 0.8rem;
+    /* Reduced from 0.5rem 1rem */
     border-radius: 4px;
-    top: 100px; /* Increased from 80px to account for navbar */
+    top: 100px;
+    /* Increased from 80px to account for navbar */
     z-index: 10;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    opacity: 0.9; /* Reduced from 0.85 to make more subtle */
+    opacity: 0.9;
+    /* Reduced from 0.85 to make more subtle */
     backdrop-filter: blur(5px);
-    width: 40%; /* Make headers smaller */
+    width: 40%;
+    /* Make headers smaller */
     margin-left: auto;
     margin-right: auto;
 }
 
-
 .education-header {
     background-color: rgba(230, 81, 0, 0.15);
-    border: 1px solid rgba(230, 81, 0, 0.3); /* Reduced from 0.5 */
+    border: 1px solid rgba(230, 81, 0, 0.3);
+    /* Reduced from 0.5 */
     grid-column: 1 / 2;
     margin-right: 12rem;
 }
 
 .work-header {
     background-color: rgba(76, 175, 80, 0.15);
-    border: 1px solid rgba(76, 175, 80, 0.3); /* Reduced from 0.5 */
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    /* Reduced from 0.5 */
     grid-column: 3 / 4;
     margin-left: 12rem;
 }
@@ -963,5 +1038,3 @@ body {
     grid-column: 2 / 3;
     background: transparent;
 }
-
-
