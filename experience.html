@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Work Experience - Sachin Chhabra</title>
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
@@ -12,29 +12,19 @@
 <body>
     <nav class="navbar">
         <div class="nav-brand"><a href="index.html" class="brand-link">Sachin Chhabra</a></div>
-        <ul class="nav-links">
-            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
-            <li><a href="experience.html" class="active"><i class="fas fa-briefcase"></i> Work Experience</a></li>
-            <li><a href="research.html"><i class="fas fa-microscope"></i> Research</a></li>
-            <li><a href="projects.html"><i class="fas fa-code-branch"></i> Projects</a></li>
-            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        <ul class="nav-links" aria-label="Primary">
+            <li><a href="experience.html" class="active"><i class="fas fa-briefcase" aria-hidden="true"></i><span class="nav-label-long">Work Experience</span><span class="nav-label-short">Work</span></a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="nav-label-long">Education</span><span class="nav-label-short">Edu</span></a></li>
+            <li><a href="research.html"><i class="fas fa-microscope" aria-hidden="true"></i><span class="nav-label-long">Research</span><span class="nav-label-short">Research</span></a></li>
+            <li><a href="projects.html"><i class="fas fa-code-branch" aria-hidden="true"></i><span class="nav-label-long">Projects</span><span class="nav-label-short">Projects</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope" aria-hidden="true"></i><span class="nav-label-long">Contact</span><span class="nav-label-short">Contact</span></a></li>
         </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </nav>
 
     <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>Work Experience</h1>
-            </div>
-        </section>
-
         <section class="experience-section">
             <div class="container">
+                <h1 class="page-title">Work Experience</h1>
                 <div class="experience-card" id="work-wayfair-current-section">
                     <div class="card-header">
                         <h2>Machine Learning Scientist</h2>
