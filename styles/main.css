@@ -44,7 +44,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -173,6 +173,28 @@ img {
     display: none;
 }
 
+/* Skip link — keyboard accessibility */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 10001;
+    padding: 0.75rem 1.25rem;
+    background: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
 /* Home tab — mobile bottom bar only */
 .nav-home {
     display: none;
@@ -232,7 +254,7 @@ main:has(.hero) {
 }
 
 .hero .typing-text {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
     letter-spacing: -0.01em;
@@ -301,7 +323,7 @@ main:has(.hero) {
 
 /* Buttons */
 .primary-btn {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 1.1rem;
     background: var(--accent-color);
@@ -369,6 +391,35 @@ main:has(.hero) {
     margin-bottom: -1rem;
 }
 
+.contact-resumes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.25rem 0 2rem;
+}
+
+.contact-resumes .primary-btn {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: var(--light-text);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(26, 35, 126, 0.08);
+    margin-top: 1rem;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
 
 .timeline {
     display: grid;
@@ -397,6 +448,13 @@ main:has(.hero) {
 }
 
 /* Timeline Items */
+a.timeline-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
 .timeline-item {
     position: relative;
     padding: 0.8rem 1rem 0.5rem 1rem;
@@ -458,7 +516,7 @@ main:has(.hero) {
 }
 
 .timeline-date {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: var(--accent-color);
     font-size: 0.8rem;
@@ -1010,7 +1068,7 @@ main:has(.hero) {
 }
 
 .news-date {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 0.8rem;
     color: var(--accent-color);
@@ -1350,6 +1408,10 @@ main:has(.hero) {
         text-align: left;
         width: 100%;
         max-width: 100%;
+    }
+
+    a.timeline-item {
+        display: grid;
     }
 
     .timeline-item.education,
@@ -1759,6 +1821,15 @@ main:has(.hero) {
     .nav-brand .brand-link {
         font-size: 1rem;
     }
+
+    .contact-resumes {
+        flex-direction: column;
+    }
+
+    .contact-resumes .primary-btn {
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 /* Very small phones */
@@ -1766,6 +1837,20 @@ main:has(.hero) {
     .nav-brand .brand-link {
         font-size: 0.85rem;
         padding: 0.4rem 0.25rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
 

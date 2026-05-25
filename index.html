@@ -5,26 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Sachin Chhabra - Portfolio</title>
+    <meta name="description" content="Portfolio of Sachin Chhabra, Machine Learning Scientist at Wayfair. Ph.D. in Computer Science from ASU. Research in computer vision, domain adaptation, and label-efficient learning.">
+    <meta property="og:title" content="Sachin Chhabra - Portfolio">
+    <meta property="og:description" content="Machine Learning Scientist at Wayfair with a Ph.D. from ASU. Research and publications in computer vision, self-supervised learning, and scalable ML systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://schh.xyz/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Sachin Chhabra - Portfolio">
+    <meta name="twitter:description" content="Machine Learning Scientist at Wayfair with a Ph.D. from ASU. Research and publications in computer vision, self-supervised learning, and scalable ML systems.">
+    <link rel="canonical" href="https://schh.xyz/">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sachin Chhabra",
+        "url": "https://schh.xyz/",
+        "email": "s-chh@outlook.com",
+        "jobTitle": "Machine Learning Scientist",
+        "description": "Machine Learning Scientist at Wayfair with a Ph.D. in Computer Science from Arizona State University. Research in computer vision, domain adaptation, and label-efficient learning.",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Wayfair"
+        },
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Arizona State University"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "VIT University"
+            }
+        ],
+        "knowsAbout": [
+            "Machine Learning",
+            "Computer Vision",
+            "Deep Learning",
+            "Self-Supervised Learning",
+            "Domain Adaptation"
+        ],
+        "sameAs": [
+            "https://www.linkedin.com/in/s-chh/",
+            "https://github.com/s-chh",
+            "https://scholar.google.com/citations?user=-s-qrSAAAAAJ"
+        ]
+    }
+    </script>
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <nav class="navbar">
-        <div class="nav-brand"><a href="index.html" class="brand-link active" aria-current="page">Sachin Chhabra</a></div>
-        <ul class="nav-links" aria-label="Primary">
-            <li class="nav-home"><a href="index.html" class="active"><i class="fas fa-home" aria-hidden="true"></i><span class="nav-label-long">Home</span><span class="nav-label-short">Home</span></a></li>
-            <li><a href="experience.html"><i class="fas fa-briefcase" aria-hidden="true"></i><span class="nav-label-long">Work Experience</span><span class="nav-label-short">Work</span></a></li>
-            <li><a href="education.html"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="nav-label-long">Education</span><span class="nav-label-short">Edu</span></a></li>
-            <li><a href="research.html"><i class="fas fa-microscope" aria-hidden="true"></i><span class="nav-label-long">Research</span><span class="nav-label-short">Research</span></a></li>
-            <li><a href="projects.html"><i class="fas fa-code-branch" aria-hidden="true"></i><span class="nav-label-long">Projects</span><span class="nav-label-short">Projects</span></a></li>
-            <li><a href="contact.html"><i class="fas fa-envelope" aria-hidden="true"></i><span class="nav-label-long">Contact</span><span class="nav-label-short">Contact</span></a></li>
-        </ul>
-    </nav>
+<body data-page="index">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <div id="site-nav"></div>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
             <div class="hero-content">
                 <h1>Sachin Chhabra</h1>
@@ -133,82 +170,82 @@
                         <div class="timeline-header work-header">Work Experience</div>
 
                         <!-- Current Job (Next row, right side) -->
-                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-wayfair-current-section'" style="cursor: pointer;">
+                        <a href="experience.html#work-wayfair-current-section" class="timeline-item work">
                             <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo" class="timeline-logo">
                             <div class="timeline-content">
                                 <div class="timeline-date">July 2024 - Present</div>
                                 <h4>Machine Learning Scientist</h4>
                                 <p>Wayfair, Mountain View, CA</p>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- PhD Education (Top Left) -->
-                        <div class="timeline-item education" onclick="window.location.href='education.html#phd-section'" style="cursor: pointer;">
+                        <a href="education.html#phd-section" class="timeline-item education">
                             <img src="assets/logos/asu-logo.png" alt="ASU Logo" class="timeline-logo">
                             <div class="timeline-content">
                                 <div class="timeline-date">Aug 2019 - May 2024</div>
                                 <h4>Ph.D. in Computer Science</h4>
                                 <p>Arizona State University</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-wayfair-intern2-section'" style="cursor: pointer;">
+                        <a href="experience.html#work-wayfair-intern2-section" class="timeline-item work">
                             <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo" class="timeline-logo">
                             <div class="timeline-content">
                                 <div class="timeline-date">June 2023 - Aug 2023</div>
                                 <h4>Machine Learning Intern</h4>
                                 <p>Wayfair, Boston, MA</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-wayfair-intern1-section'" style="cursor: pointer;">
+                        <a href="experience.html#work-wayfair-intern1-section" class="timeline-item work">
                             <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo" class="timeline-logo">
                             <div class="timeline-content">
                                 <div class="timeline-date">May 2022 - Aug 2022</div>
                                 <h4>Machine Learning Intern</h4>
                                 <p>Wayfair, Boston, MA</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-systems-imagination-intern-section'" style="cursor: pointer;">
+                        <a href="experience.html#work-systems-imagination-intern-section" class="timeline-item work">
                             <img src="assets/logos/systems-imagination-logo.png" alt="Systems Imagination Logo" class="timeline-logo">
                             <div class="timeline-content">
                                 <div class="timeline-date">May 2020 - Aug 2020</div>
                                 <h4>Machine Learning Research Intern</h4>
                                 <p>Systems Imagination, Remote</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="timeline-item education" onclick="window.location.href='education.html#masters-section'" style="cursor: pointer;">
+                        <a href="education.html#masters-section" class="timeline-item education">
                             <img src="assets/logos/asu-logo.png" alt="ASU Logo" class="timeline-logo">
                             <div class="timeline-content">
                                 <div class="timeline-date">Aug 2017 - May 2019</div>
                                 <h4>M.S. in Computer Science</h4>
                                 <p>Arizona State University</p>
                             </div>
-                        </div>
+                        </a>
                         <div class="timeline-spacer"></div>
                         <div style="grid-column: 3 / 4;"></div>
                         <div style="grid-column: 1 / 2;"></div>
                         <div class="timeline-spacer"></div>
 
-                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-accenture-section'" style="cursor: pointer;">
+                        <a href="experience.html#work-accenture-section" class="timeline-item work">
                             <img src="assets/logos/accenture-logo.png" alt="Accenture Logo" class="timeline-logo">
                             <div class="timeline-content">
                                 <div class="timeline-date">Dec 2013 - Jun 2017</div>
                                 <h4>Senior Software Engineer</h4>
                                 <p>Accenture, Bangalore, India</p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="timeline-item education" onclick="window.location.href='education.html#bachelors-section'" style="cursor: pointer;">
+                        <a href="education.html#bachelors-section" class="timeline-item education">
                             <img src="assets/logos/vit-logo.png" alt="VIT Logo" class="timeline-logo">
                             <div class="timeline-content">
                                 <div class="timeline-date">2009 - 2013</div>
                                 <h4>B.Tech in Computer Science</h4>
                                 <p>VIT University, India</p>
                             </div>
-                        </div>
+                        </a>
                             </div>
                         </div>
                     </div>
@@ -267,12 +304,9 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; Sachin Chhabra. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
 
+    <script src="js/site.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/main.js"></script>
 </body>
