@@ -1955,15 +1955,15 @@ a.timeline-item {
     transform: scale(1.03);
 }
 
-/* Research cards - light slate */
+/* Research cards - dusty mauve */
 .research-card {
-    background-color: rgba(84, 110, 122, 0.04);
-    border-color: rgba(84, 110, 122, 0.5);
+    background-color: rgba(142, 95, 130, 0.04);
+    border-color: rgba(142, 95, 130, 0.5);
 }
 
 .research-card:hover {
-    background-color: rgba(84, 110, 122, 0.15);
-    border-color: rgba(84, 110, 122, 1.0);
+    background-color: rgba(142, 95, 130, 0.15);
+    border-color: rgba(142, 95, 130, 1.0);
     transform: scale(1.03);
 }
 
