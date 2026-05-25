@@ -669,7 +669,9 @@ a.timeline-item {
 
 @media (min-width: 1025px) {
     .experience-card,
-    .education-card {
+    .education-card,
+    .project-card,
+    .research-card {
         padding: 0.35rem 0.5rem 0.3rem 0.5rem;
     }
 
@@ -679,10 +681,23 @@ a.timeline-item {
     }
 
     .experience-card .card-header,
-    .education-card .card-header {
+    .education-card .card-header,
+    .project-card .card-header,
+    .research-card .card-header {
         margin-bottom: 0.5rem;
         padding-bottom: 0.45rem;
         border-bottom: 1px solid rgba(26, 35, 126, 0.1);
+    }
+
+    .project-card .card-header h2,
+    .research-card .card-header h2 {
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    .project-card .card-links,
+    .research-card .card-links {
+        font-size: 0.85rem;
     }
 
     .experience-card .card-content,
@@ -1579,33 +1594,46 @@ a.timeline-item {
         transform: none;
     }
 
-    /* Education & work experience detail cards */
+    /* Detail page cards — shared layout */
     .experience-card,
-    .education-card {
+    .education-card,
+    .project-card,
+    .research-card {
         position: relative;
         padding: 0.65rem 0.85rem 0.85rem;
         margin-bottom: 0.75rem;
     }
 
     .experience-card:hover,
-    .education-card:hover {
+    .education-card:hover,
+    .project-card:hover,
+    .research-card:hover {
         transform: none;
     }
 
     .experience-card .card-header,
-    .education-card .card-header {
+    .education-card .card-header,
+    .project-card .card-header,
+    .research-card .card-header {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
         gap: 0.35rem 0.75rem;
         margin: 0 0 0.5rem 0;
-        padding: 0 3.25rem 0.45rem 0;
+        padding: 0 0 0.45rem 0;
         border-bottom: 1px solid rgba(26, 35, 126, 0.1);
     }
 
+    .experience-card .card-header,
+    .education-card .card-header {
+        padding-right: 3.25rem;
+    }
+
     .experience-card .card-header h2,
-    .education-card .card-header h2 {
+    .education-card .card-header h2,
+    .project-card .card-header h2,
+    .research-card .card-header h2 {
         flex: 1 1 auto;
         min-width: 0;
         width: auto;
@@ -1613,6 +1641,8 @@ a.timeline-item {
         padding: 0;
         font-size: 0.95rem;
         line-height: 1.3;
+        white-space: normal;
+        word-wrap: break-word;
     }
 
     .experience-card .card-date,
@@ -1626,6 +1656,27 @@ a.timeline-item {
         font-weight: 600;
         color: var(--accent-color);
         margin: 0;
+    }
+
+    .project-card .card-links,
+    .research-card .card-links {
+        flex: 0 1 auto;
+        width: auto;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.5rem 0.75rem;
+        margin-top: 0;
+    }
+
+    .project-card .card-link,
+    .research-card .card-link {
+        margin-left: 0;
+        font-size: 0.75rem;
+    }
+
+    .project-card .card-links span {
+        font-size: 0.75rem;
+        color: var(--light-text);
     }
 
     .experience-card .card-logo,
@@ -1646,106 +1697,7 @@ a.timeline-item {
     }
 
     .experience-card .card-content,
-    .education-card .card-content {
-        display: block;
-        position: static;
-        padding: 0;
-    }
-
-    .experience-card .card-content > p:first-of-type,
-    .education-card .card-content > p:first-of-type {
-        margin: 0 0 0.35rem 0;
-        font-size: 0.85rem;
-    }
-
-    .experience-card .card-content p,
-    .education-card .card-content p {
-        margin-bottom: 0.25rem;
-        line-height: 1.45;
-        font-size: 0.85rem;
-    }
-
-    .experience-card .card-content h3,
-    .education-card .card-content h3 {
-        font-size: 0.9rem;
-        margin-top: 0.35rem;
-        margin-bottom: 0.25rem;
-    }
-
-    .experience-card .card-content ul,
-    .education-card .card-content ul {
-        margin: 0 0 0.5rem 1rem;
-    }
-
-    .experience-card .card-content ul li,
-    .education-card .card-content ul li {
-        white-space: normal;
-        font-size: 0.82rem;
-        line-height: 1.4;
-        margin-bottom: 0.35rem;
-    }
-
-    .experience-card .card-tech,
-    .education-card .card-tech {
-        margin-top: 0.25rem;
-    }
-
-    .experience-card .card-tag,
-    .education-card .card-tag {
-        font-size: 0.75rem;
-    }
-
-    /* Projects & research detail cards */
-    .project-card,
-    .research-card {
-        padding: 0.65rem 0.85rem 0.85rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .project-card:hover,
-    .research-card:hover {
-        transform: none;
-    }
-
-    .project-card .card-header,
-    .research-card .card-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.15rem;
-        margin: 0 0 0.5rem 0;
-        padding: 0 0 0.45rem 0;
-        border-bottom: 1px solid rgba(26, 35, 126, 0.1);
-    }
-
-    .project-card .card-header h2,
-    .research-card .card-header h3 {
-        margin: 0;
-        padding: 0;
-        font-size: 0.95rem;
-        line-height: 1.3;
-        width: 100%;
-        white-space: normal;
-        word-wrap: break-word;
-    }
-
-    .project-card .card-links,
-    .research-card .card-links {
-        width: 100%;
-        flex-wrap: wrap;
-        gap: 0.5rem 0.75rem;
-        margin-top: 0.35rem;
-    }
-
-    .project-card .card-link,
-    .research-card .card-link {
-        margin-left: 0;
-    }
-
-    .project-card .card-links span {
-        font-size: 0.82rem;
-        color: var(--light-text);
-    }
-
+    .education-card .card-content,
     .project-card .card-content,
     .research-card .card-content {
         display: block;
@@ -1753,12 +1705,16 @@ a.timeline-item {
         padding: 0;
     }
 
+    .experience-card .card-content > p:first-of-type,
+    .education-card .card-content > p:first-of-type,
     .project-card .card-content > p:first-of-type,
     .research-card .card-content > p:first-of-type {
         margin: 0 0 0.35rem 0;
         font-size: 0.85rem;
     }
 
+    .experience-card .card-content p,
+    .education-card .card-content p,
     .project-card .card-content p,
     .research-card .card-content p {
         margin-bottom: 0.25rem;
@@ -1773,6 +1729,8 @@ a.timeline-item {
         line-height: 1.45;
     }
 
+    .experience-card .card-content h3,
+    .education-card .card-content h3,
     .project-card .card-content h3,
     .research-card .card-content h3 {
         font-size: 0.9rem;
@@ -1780,11 +1738,15 @@ a.timeline-item {
         margin-bottom: 0.25rem;
     }
 
+    .experience-card .card-content ul,
+    .education-card .card-content ul,
     .project-card .card-content ul,
     .research-card .card-content ul {
         margin: 0 0 0.5rem 1rem;
     }
 
+    .experience-card .card-content ul li,
+    .education-card .card-content ul li,
     .project-card .card-content ul li,
     .research-card .card-content ul li {
         white-space: normal;
@@ -1793,11 +1755,15 @@ a.timeline-item {
         margin-bottom: 0.35rem;
     }
 
+    .experience-card .card-tech,
+    .education-card .card-tech,
     .project-card .card-tech,
     .research-card .card-tech {
         margin-top: 0.25rem;
     }
 
+    .experience-card .card-tag,
+    .education-card .card-tag,
     .project-card .card-tag,
     .research-card .card-tag {
         font-size: 0.75rem;
@@ -1989,15 +1955,15 @@ a.timeline-item {
     transform: scale(1.03);
 }
 
-/* Research cards - light red/pink */
+/* Research cards - light slate */
 .research-card {
-    background-color: rgba(244, 67, 54, 0.04);
-    border-color: rgba(244, 67, 54, 0.5);
+    background-color: rgba(84, 110, 122, 0.04);
+    border-color: rgba(84, 110, 122, 0.5);
 }
 
 .research-card:hover {
-    background-color: rgba(244, 67, 54, 0.15);
-    border-color: rgba(244, 67, 54, 1.0);
+    background-color: rgba(84, 110, 122, 0.15);
+    border-color: rgba(84, 110, 122, 1.0);
     transform: scale(1.03);
 }
 
