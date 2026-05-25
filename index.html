@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Sachin Chhabra - Portfolio</title>
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
@@ -14,18 +14,13 @@
 <body>
     <nav class="navbar">
         <div class="nav-brand"><a href="index.html" class="brand-link">Sachin Chhabra</a></div>
-        <ul class="nav-links">
-            <li><a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a></li>
-            <li><a href="experience.html"><i class="fas fa-briefcase"></i> Work Experience</a></li>
-            <li><a href="research.html"><i class="fas fa-microscope"></i> Research</a></li>
-            <li><a href="projects.html"><i class="fas fa-code-branch"></i> Projects</a></li>
-            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        <ul class="nav-links" aria-label="Primary">
+            <li><a href="experience.html"><i class="fas fa-briefcase" aria-hidden="true"></i><span class="nav-label-long">Work Experience</span><span class="nav-label-short">Work</span></a></li>
+            <li><a href="education.html"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="nav-label-long">Education</span><span class="nav-label-short">Edu</span></a></li>
+            <li><a href="research.html"><i class="fas fa-microscope" aria-hidden="true"></i><span class="nav-label-long">Research</span><span class="nav-label-short">Research</span></a></li>
+            <li><a href="projects.html"><i class="fas fa-code-branch" aria-hidden="true"></i><span class="nav-label-long">Projects</span><span class="nav-label-short">Projects</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope" aria-hidden="true"></i><span class="nav-label-long">Contact</span><span class="nav-label-short">Contact</span></a></li>
         </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </nav>
 
     <main>
@@ -36,14 +31,14 @@
                     <span class="typed"></span>
                 </div>
                 <div class="cta-buttons">
-                    <a href="assets/Resume_Sachin_Chhabra.pdf" class="primary-btn" download>Download Resume</a>
+                    <a href="assets/Resume_Sachin_Chhabra_Online.pdf" class="primary-btn" download>Download Resume</a>
                     <a href="assets/Sachin_Chhabra_CV.pdf" class="primary-btn" download>Download CV</a>
                 </div>
             </div>
         </section>
 
-        <div class="sections-with-news">
-            <div class="sections-content">
+        <div class="homepage-layout">
+            <div class="homepage-main">
                 <section class="about" id="about">
                     <div class="container">
                         <h2>About Me</h2>
@@ -57,7 +52,6 @@
                         </p>
                         <p class="about-text">
                             Outside of work and research, I enjoy building open-source machine learning projects—such as LLMs, Vision Transformers, and I contribute as a regular reviewer for conferences like CVPR, NeurIPS, ICLR, and ICML.
-                        </p>
                         </p>
                     </div>
                 </section>
@@ -126,12 +120,105 @@
 
                     </div>
                 </section>
+
+                <section class="timeline-section" id="timeline">
+                    <div class="container">
+                        <div class="timeline-wrapper">
+                            <h2>Work Experience & Education Timeline</h2>
+                            <div class="timeline">
+                        <!-- Timeline Headers -->
+                        <div class="timeline-header education-header">Education</div>
+                        <div class="timeline-spacer header-spacer"></div>
+                        <div class="timeline-header work-header">Work Experience</div>
+
+                        <!-- Current Job (Next row, right side) -->
+                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-wayfair-current-section'" style="cursor: pointer;">
+                            <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo" class="timeline-logo">
+                            <div class="timeline-content">
+                                <div class="timeline-date">July 2024 - Present</div>
+                                <h4>Machine Learning Scientist</h4>
+                                <p>Wayfair, Mountain View, CA</p>
+                            </div>
+                        </div>
+
+                        <!-- PhD Education (Top Left) -->
+                        <div class="timeline-item education" onclick="window.location.href='education.html#phd-section'" style="cursor: pointer;">
+                            <img src="assets/logos/asu-logo.png" alt="ASU Logo" class="timeline-logo">
+                            <div class="timeline-content">
+                                <div class="timeline-date">Aug 2019 - May 2024</div>
+                                <h4>Ph.D. in Computer Science</h4>
+                                <p>Arizona State University</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-wayfair-intern2-section'" style="cursor: pointer;">
+                            <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo" class="timeline-logo">
+                            <div class="timeline-content">
+                                <div class="timeline-date">June 2023 - Aug 2023</div>
+                                <h4>Machine Learning Intern</h4>
+                                <p>Wayfair, Boston, MA</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-wayfair-intern1-section'" style="cursor: pointer;">
+                            <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo" class="timeline-logo">
+                            <div class="timeline-content">
+                                <div class="timeline-date">May 2022 - Aug 2022</div>
+                                <h4>Machine Learning Intern</h4>
+                                <p>Wayfair, Boston, MA</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-systems-imagination-intern-section'" style="cursor: pointer;">
+                            <img src="assets/logos/systems-imagination-logo.png" alt="Systems Imagination Logo" class="timeline-logo">
+                            <div class="timeline-content">
+                                <div class="timeline-date">May 2020 - Aug 2020</div>
+                                <h4>Machine Learning Research Intern</h4>
+                                <p>Systems Imagination, Remote</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item education" onclick="window.location.href='education.html#masters-section'" style="cursor: pointer;">
+                            <img src="assets/logos/asu-logo.png" alt="ASU Logo" class="timeline-logo">
+                            <div class="timeline-content">
+                                <div class="timeline-date">Aug 2017 - May 2019</div>
+                                <h4>M.S. in Computer Science</h4>
+                                <p>Arizona State University</p>
+                            </div>
+                        </div>
+                        <div class="timeline-spacer"></div>
+                        <div style="grid-column: 3 / 4;"></div>
+                        <div style="grid-column: 1 / 2;"></div>
+                        <div class="timeline-spacer"></div>
+
+                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-accenture-section'" style="cursor: pointer;">
+                            <img src="assets/logos/accenture-logo.png" alt="Accenture Logo" class="timeline-logo">
+                            <div class="timeline-content">
+                                <div class="timeline-date">Dec 2013 - Jun 2017</div>
+                                <h4>Senior Software Engineer</h4>
+                                <p>Accenture, Bangalore, India</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item education" onclick="window.location.href='education.html#bachelors-section'" style="cursor: pointer;">
+                            <img src="assets/logos/vit-logo.png" alt="VIT Logo" class="timeline-logo">
+                            <div class="timeline-content">
+                                <div class="timeline-date">2009 - 2013</div>
+                                <h4>B.Tech in Computer Science</h4>
+                                <p>VIT University, India</p>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
 
-            <div class="news-sidebar">
+            <aside class="news-sidebar">
                 <section class="news-updates" id="news">
                     <div class="news-container">
                         <h2><i class="fas fa-newspaper"></i> Updates</h2>
+                        <p class="last-updated"><i class="fas fa-clock"></i> Last updated: October 2025</p>
                         <div class="news-timeline">
                             <div class="news-item">
                                 <div class="news-date">October 2025</div>
@@ -169,137 +256,24 @@
                                         <li>Invited to review for BMVC 2025.</li>
                                         <li>Invited to review for ACM TIST.</li>
                                     </ul>
-                                    
                                 </div>                                
                             </div>
 
                         </div>
                     </div>
                 </section>
-            </div>
+            </aside>
         </div>
-
-        <section class="about" id="about">
-            <div class="container">
-                <div class="timeline-section">
-                    <h2>Education & Work Experience Timeline</h2>
-                    <div class="timeline">
-                        <!-- Timeline Headers -->
-                        <div class="timeline-header education-header">Education</div>
-                        <div class="timeline-spacer header-spacer"></div>
-                        <div class="timeline-header work-header">Work Experience</div>
-
-                        <!-- Current Job (Next row, right side) -->
-                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-wayfair-current-section'" style="cursor: pointer;">
-                            <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo" class="timeline-logo">
-                            <div class="timeline-content">
-                                <div class="timeline-date">July 2024 - Present</div>
-                                <h4>Machine Learning Scientist</h4>
-                                <p>Wayfair, Mountain View, CA</p>
-                                <!-- <p>Working on ML and computer vision applications</p> -->
-                            </div>
-                        </div>
-
-                        <!-- PhD Education (Top Left) -->
-                        <div class="timeline-item education" onclick="window.location.href='education.html#phd-section'" style="cursor: pointer;">
-                            <img src="assets/logos/asu-logo.png" alt="ASU Logo" class="timeline-logo">
-                            <div class="timeline-content">
-                                <div class="timeline-date">Aug 2019 - May 2024</div>
-                                <h4>Ph.D. in Computer Science</h4>
-                                <p>Arizona State University</p>
-                                <!-- <p>Machine Learning and Computer Vision</p> -->
-                            </div>
-                        </div>
-
-
-                        <!-- Continue with the rest of your timeline items -->
-                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-wayfair-intern2-section'" style="cursor: pointer;">
-                            <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo" class="timeline-logo">
-                            <div class="timeline-date">June 2023 - Aug 2023</div>
-                            <div class="timeline-content">
-                                <h4>Machine Learning Intern</h4>
-                                <p>Wayfair, Boston, MA</p>
-                                <!-- <p>Summer internship focused on ML applications</p> -->
-                            </div>
-                        </div>
-
-                        <!-- Work Experience -->
-                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-wayfair-intern1-section'" style="cursor: pointer;">
-                            <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo" class="timeline-logo">
-                            <div class="timeline-date">May 2022 - Aug 2022</div>
-                            <div class="timeline-content">
-                                <h4>Machine Learning Intern</h4>
-                                <p>Wayfair, Boston, MA</p>
-                                <!-- <p>Summer internship in ML and computer vision</p> -->
-                            </div>
-                        </div>
-
-                        <!-- Work Experience - Systems Imagination -->
-                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-systems-imagination-intern-section'" style="cursor: pointer;">
-                            <img src="assets/logos/systems-imagination-logo.png" alt="Systems Imagination Logo" class="timeline-logo">
-                            <div class="timeline-date">May 2020 - Aug 2020</div>
-                            <div class="timeline-content">
-                                <h4>Machine Learning Research Intern</h4>
-                                <p>Systems Imagination, Remote</p>
-                                <!-- <p>Research internship in machine learning</p> -->
-                            </div>
-                        </div>
-
-                        <!-- Education - MS (MOVED HERE) -->
-                        <div class="timeline-item education" onclick="window.location.href='education.html#masters-section'" style="cursor: pointer;">
-                            <img src="assets/logos/asu-logo.png" alt="ASU Logo" class="timeline-logo">
-                            <div class="timeline-date">Aug 2017 - May 2019</div>
-                            <div class="timeline-content">
-                                <h4>M.S. in Computer Science</h4>
-                                <p>Arizona State University</p>
-                                <!-- <p>Focus on Computer Science fundamentals and advanced topics</p> -->
-                            </div>
-                        </div>
-                        <!-- Empty space in middle column -->
-                        <div class="timeline-spacer"></div>
-
-                        <!-- Empty space in right column to push ML Scientist to next row -->
-                        <div style="grid-column: 3 / 4;"></div>
-
-                        <!-- Empty space in left column for second row -->
-                        <div style="grid-column: 1 / 2;"></div>
-
-                        <!-- Empty space in middle column -->
-                        <div class="timeline-spacer"></div>
-
-                        <!-- Work Experience - Accenture -->
-                        <div class="timeline-item work" onclick="window.location.href='experience.html#work-accenture-section'" style="cursor: pointer;">
-                            <img src="assets/logos/accenture-logo.png" alt="Accenture Logo" class="timeline-logo">
-                            <div class="timeline-date">Dec 2013 - Jun 2017</div>
-                            <div class="timeline-content">
-                                <h4>Senior Software Engineer</h4>
-                                <p>Accenture, Bangalore, India</p>
-                                <!-- <p>Software development and engineering</p> -->
-                            </div>
-                        </div>
-
-                        <!-- Education - BTech -->
-                        <div class="timeline-item education" onclick="window.location.href='education.html#bachelors-section'" style="cursor: pointer;">
-                            <img src="assets/logos/vit-logo.png" alt="VIT Logo" class="timeline-logo">
-                            <div class="timeline-date">2009 - 2013</div>
-                            <div class="timeline-content">
-                                <h4>B.Tech in Computer Science</h4>
-                                <p>VIT University, India</p>
-                                <!-- <p>Foundation in Computer Science and Engineering</p> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <p>&copy; Sachin Chhabra. All rights reserved.</p>
         </div>
+    </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

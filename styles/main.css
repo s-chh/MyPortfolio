@@ -24,13 +24,23 @@
     --card-shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.15);
     --card-border: 1px solid rgba(26, 35, 126, 0.15);
     --card-border-hover: 1px solid rgba(26, 35, 126, 0.25);
+    --navbar-height: 76px;
+    --mobile-tab-bar-height: 3.75rem;
+    --layout-max-width: 1400px;
+    --layout-padding-x: 2rem;
+    --sidebar-width: 340px;
+    --layout-gap: 2rem;
 }
 
 /* Global Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 120px;
-    /* Increased from 120px */
+    overflow-x: clip;
 }
 
 body {
@@ -38,8 +48,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100%;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -55,6 +71,7 @@ body {
     padding: 1.2rem 2rem;
     position: fixed;
     width: 100%;
+    max-width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -135,33 +152,28 @@ body {
     background: var(--hover-color);
 }
 
-/* Sections with News Layout */
-.sections-with-news {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
+.nav-label-short {
+    display: none;
 }
 
-.sections-content {
-    min-width: 0; /* Prevents grid overflow */
+/* Main content — clears fixed navbar (subpages only; hero handles index) */
+main {
+    padding-top: calc(var(--navbar-height) + 2.5rem);
+    padding-bottom: 2rem;
 }
 
-.news-sidebar {
-    min-width: 0; /* Prevents grid overflow */
+main:has(.hero) {
+    padding-top: 0;
 }
 
-/* Hero Section */
+/* Hero banner (index only) */
 .hero {
     background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     position: relative;
-    overflow: hidden;
-    padding: 4rem 2rem 2rem;
+    overflow: visible;
+    padding: calc(var(--navbar-height) + 2.5rem) 2rem 2.5rem;
     text-align: center;
-    min-height: 25vh;
+    min-height: calc(var(--navbar-height) + 11rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,27 +181,28 @@ body {
 
 .hero-content {
     max-width: 800px;
-    margin: 1rem auto 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    width: 100%;
 }
 
 .hero h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-weight: 700;
     letter-spacing: -0.5px;
     color: white;
     margin: 0;
-    padding-top: 1rem;
+    line-height: 1.15;
 }
 
-.typing-text {
+.hero .typing-text {
     font-family: 'Inter', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     font-weight: 400;
     letter-spacing: -0.01em;
     color: #ffffff;
@@ -198,37 +211,88 @@ body {
     height: 1.2em;
 }
 
-.cta-buttons {
-    margin-top: 1.5rem;
-    padding-bottom: 0;
+.hero .cta-buttons {
+    margin-top: 1rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.primary-btn {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 1.1rem;
+.hero .primary-btn {
     background: rgba(255, 255, 255, 0.15);
     color: white;
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
     border: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
 }
 
-.primary-btn:hover {
+.hero .primary-btn:hover {
     background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.35);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Page title (subpages, no banner) */
+.page-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: left;
+    margin: 0 0 1.5rem;
+    line-height: 1.2;
+}
+
+/* Homepage layout — main column + sticky updates sidebar */
+.homepage-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--sidebar-width);
+    gap: var(--layout-gap);
+    max-width: var(--layout-max-width);
+    margin: 0 auto;
+    padding: 1.5rem var(--layout-padding-x) 0;
+    position: relative;
+    align-items: start;
+}
+
+.homepage-main {
+    min-width: 0;
+}
+
+.news-sidebar {
+    min-width: 0;
+    position: sticky;
+    top: calc(var(--navbar-height) + 2rem);
+    align-self: start;
+    z-index: 2;
+    padding-top: 0.75rem;
+}
+
+/* Buttons */
+.primary-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.85rem 1.75rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+}
+
+.primary-btn:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Section Headers */
 .container h2,
-.skills-section h2 {
+.skills-section h2,
+.timeline-section h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1.5rem;
@@ -236,10 +300,29 @@ body {
     margin-bottom: 1.5rem;
     text-align: left;
     max-width: 1200px;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
     padding-top: 20px;
-    /* Added padding to prevent cut-off */
+}
+
+/* Timeline section — inside homepage main column */
+.timeline-section {
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-section .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+    min-width: 0;
+}
+
+.timeline-section h2 {
+    padding-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
 }
 
 /* All sections need top padding */
@@ -248,7 +331,7 @@ body {
 .research-section,
 .projects-section,
 .contact-section {
-    padding-top: 3rem;
+    padding-top: 0;
 }
 
 .page-intro {
@@ -260,9 +343,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 2px 1fr;
     gap: 0.75rem 0;
-    /* Reduced from 2rem 0 to create less vertical space */
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     position: relative;
 }
 
@@ -305,14 +387,21 @@ body {
 
 .timeline-item.education {
     grid-column: 1 / 2;
-    margin-right: 2rem;
-    text-align: right;
+    margin-right: 1.25rem;
+    padding: 0.8rem 1rem 0.5rem calc(80px + 1rem);
+}
+
+@media (min-width: 1025px) {
+    .timeline-item.education {
+        text-align: right;
+    }
 }
 
 .timeline-item.work {
     grid-column: 3 / 4;
-    margin-left: 2rem;
+    margin-left: 1.25rem;
     text-align: left;
+    padding: 0.8rem calc(80px + 1rem) 0.5rem 1rem;
 }
 
 .timeline-item::before {
@@ -366,15 +455,22 @@ body {
     overflow-wrap: normal;
 }
 
-/* Timeline Logo Styling */
-.timeline-item.education .timeline-content {
-    padding-left: 80px;
-    width: calc(100% - 80px);
-}
+/* Timeline Logo Styling — desktop only */
+@media (min-width: 1025px) {
+    .timeline-item.work .timeline-content,
+    .timeline-item.work > .timeline-date {
+        width: 100%;
+        padding: 0;
+        text-align: left;
+    }
 
-.timeline-item.work .timeline-content {
-    padding-right: 80px;
-    width: calc(100% - 80px);
+    .timeline-item.education .timeline-content,
+    .timeline-item.education > .timeline-date,
+    .timeline-item.education .timeline-content .timeline-date {
+        width: 100%;
+        padding: 0;
+        text-align: right;
+    }
 }
 
 .timeline-logo {
@@ -389,10 +485,12 @@ body {
 
 .timeline-item.education .timeline-logo {
     left: 1rem;
+    right: auto;
 }
 
 .timeline-item.work .timeline-logo {
     right: 1rem;
+    left: auto;
 }
 
 
@@ -808,12 +906,10 @@ body {
     box-shadow: var(--card-shadow);
     border: var(--card-border);
     padding: 1.2rem;
-    margin-top: 2rem;
-    position: sticky;
-    top: 120px; /* Account for navbar height */
-    max-height: calc(100vh - 140px);
+    margin-top: 0.5rem;
+    max-height: calc(100vh - var(--navbar-height) - 3.5rem);
     overflow-y: auto;
-    width: 280px; /* Fixed width to prevent text wrapping */
+    width: 100%;
 }
 
 .news-container h2 {
@@ -832,6 +928,20 @@ body {
 .news-container h2 i {
     color: var(--accent-color);
     font-size: 1.2rem;
+}
+
+.last-updated {
+    font-size: 0.85rem;
+    color: var(--light-text);
+    margin: -0.75rem 0 1.25rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.last-updated i {
+    color: var(--accent-color);
+    font-size: 0.8rem;
 }
 
 .news-timeline {
@@ -1025,24 +1135,438 @@ body {
     line-height: 1.4;
 }
 
-/* Responsive Styles for Mobile */
-@media (max-width: 768px) {
-    .sections-with-news {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+/* Tablet & mobile — bottom tab bar + timeline */
+@media (max-width: 1024px) {
+    html {
+        scroll-padding-top: 80px;
+    }
+
+    /* Navigation — fixed bottom tab bar */
+    .navbar {
+        justify-content: center;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-brand .brand-link {
+        font-size: 1.15rem;
+        padding: 0.5rem 0.5rem;
+        letter-spacing: 0;
+    }
+
+    .nav-label-long {
+        display: none;
+    }
+
+    .nav-label-short {
+        display: block;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .nav-links {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        gap: 0;
+        background: var(--card-background);
+        box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+        border-top: 1px solid rgba(26, 35, 126, 0.1);
+        padding: 0;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        z-index: 1000;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .nav-links li {
+        flex: 1;
+        min-width: 0;
+        width: auto;
+    }
+
+    .nav-links a {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+        padding: 0.45rem 0.15rem;
+        font-size: clamp(0.55rem, 2.4vw, 0.65rem);
+        font-weight: 600;
+        letter-spacing: 0;
+        width: 100%;
+        min-height: var(--mobile-tab-bar-height);
+        border-radius: 0;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .nav-links a i {
+        font-size: 1.15rem;
+    }
+
+    .nav-links a.active {
+        background: rgba(26, 35, 126, 0.06);
+        color: var(--accent-color);
+        box-shadow: inset 0 2px 0 var(--accent-color);
+    }
+
+    .nav-links a:hover {
+        transform: none;
+        background: rgba(26, 35, 126, 0.04);
+    }
+
+    body {
+        padding-bottom: calc(var(--mobile-tab-bar-height) + env(safe-area-inset-bottom, 0px));
+    }
+
+    main {
+        padding-bottom: 1.5rem;
+    }
+
+    /* Homepage layout — single column on tablet/mobile */
+    .homepage-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
         padding: 0 1rem;
+        max-width: 100%;
+    }
+
+    .homepage-main {
+        display: contents;
+    }
+
+    .about {
+        order: 1;
+    }
+
+    .skills {
+        order: 2;
     }
 
     .news-sidebar {
-        order: -1; /* Move news section to top on mobile */
+        order: 3;
+        align-self: auto;
+        position: static;
+        top: auto;
+        z-index: auto;
+        padding-top: 0;
+    }
+
+    .timeline-section {
+        order: 4;
+    }
+
+    .timeline-section .container {
+        grid-column: auto;
     }
 
     .news-updates {
         position: static;
         max-height: none;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        width: 100%; /* Full width on mobile */
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    main {
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    /* Timeline — compact aligned cards on mobile/tablet */
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        max-width: 100%;
+    }
+
+    .timeline::after {
+        display: none;
+    }
+
+    .timeline-header,
+    .timeline-spacer,
+    .timeline > div[style*="grid-column"] {
+        display: none !important;
+    }
+
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 44px 1fr;
+        column-gap: 0.75rem;
+        row-gap: 0;
+        align-items: center;
+        margin: 0;
+        padding: 0.7rem 0.85rem;
+        text-align: left;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .timeline-item.education,
+    .timeline-item.work {
+        grid-column: unset;
+        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+        padding: 0.7rem 0.85rem;
+    }
+
+    .timeline-item::before {
+        display: none;
+    }
+
+    .timeline-logo {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: center;
+        position: static;
+        transform: none;
+        width: 44px;
+        height: 44px;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .timeline-item.education .timeline-logo,
+    .timeline-item.work .timeline-logo {
+        left: auto;
+        right: auto;
+    }
+
+    .timeline-content {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 0;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-item.education .timeline-content,
+    .timeline-item.work .timeline-content {
+        padding: 0;
+        width: 100%;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .timeline-content .timeline-date,
+    .timeline-item > .timeline-date,
+    .timeline-item.education .timeline-content .timeline-date,
+    .timeline-item.work .timeline-content .timeline-date {
+        text-align: left;
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 0 0.2rem 0;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.45rem;
+        white-space: normal;
+        align-self: flex-start;
+    }
+
+    .timeline-date {
+        white-space: normal;
+        text-align: left;
+    }
+
+    .timeline-content h4 {
+        white-space: normal;
+        font-size: 0.9rem;
+        line-height: 1.25;
+        margin-bottom: 0.15rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.8rem;
+        line-height: 1.35;
+        margin: 0;
+    }
+
+    .timeline-item:hover,
+    .timeline-item.education:hover,
+    .timeline-item.work:hover {
+        transform: none;
+    }
+
+    /* Education & work experience detail cards */
+    .experience-card,
+    .education-card {
+        position: relative;
+        padding: 0.65rem 0.85rem 0.85rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .experience-card:hover,
+    .education-card:hover {
+        transform: none;
+    }
+
+    .experience-card .card-header,
+    .education-card .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.15rem;
+        margin: 0 0 0.5rem 0;
+        padding: 0 3.25rem 0.45rem 0;
+        border-bottom: 1px solid rgba(26, 35, 126, 0.1);
+    }
+
+    .experience-card .card-header h2,
+    .education-card .card-header h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 0.95rem;
+        line-height: 1.3;
+        width: 100%;
+    }
+
+    .experience-card .card-header > div,
+    .education-card .card-header > div {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--accent-color);
+        text-align: left;
+        width: 100%;
+        margin: 0;
+    }
+
+    .experience-card .card-logo,
+    .education-card .card-logo {
+        position: absolute;
+        top: 0.65rem;
+        right: 0.85rem;
+        left: auto;
+        max-width: 52px;
+        margin: 0;
+        transform: none;
+        z-index: 2;
+    }
+
+    .experience-card .card-logo img,
+    .education-card .card-logo img {
+        max-height: 40px;
+    }
+
+    .experience-card .card-content,
+    .education-card .card-content {
+        display: block;
+        position: static;
+        padding: 0;
+    }
+
+    .experience-card .card-content > p:first-of-type,
+    .education-card .card-content > p:first-of-type {
+        margin: 0 0 0.35rem 0;
+        font-size: 0.85rem;
+    }
+
+    .experience-card .card-content p,
+    .education-card .card-content p {
+        margin-bottom: 0.25rem;
+        line-height: 1.45;
+        font-size: 0.85rem;
+    }
+
+    .experience-card .card-content h3,
+    .education-card .card-content h3 {
+        font-size: 0.9rem;
+        margin-top: 0.35rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .experience-card .card-content ul,
+    .education-card .card-content ul {
+        margin: 0 0 0.5rem 1rem;
+    }
+
+    .experience-card .card-content ul li,
+    .education-card .card-content ul li {
+        white-space: normal;
+        font-size: 0.82rem;
+        line-height: 1.4;
+        margin-bottom: 0.35rem;
+    }
+
+    .experience-card .card-tech,
+    .education-card .card-tech {
+        margin-top: 0.25rem;
+    }
+
+    .experience-card .card-tag,
+    .education-card .card-tag {
+        font-size: 0.75rem;
+    }
+}
+
+/* Phone-specific tweaks */
+@media (max-width: 768px) {
+    /* Hero (index) */
+    .hero {
+        padding: calc(var(--navbar-height) + 2rem) 1rem 2.5rem;
+        min-height: calc(var(--navbar-height) + 10rem);
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .typing-text {
+        font-size: 1.1rem;
+    }
+
+    .hero .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        gap: 0.75rem;
+    }
+
+    .hero .primary-btn {
+        font-size: 1rem;
+        padding: 0.85rem 1.5rem;
+        text-align: center;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    main:not(:has(.hero)) {
+        padding-top: calc(var(--navbar-height) + 2rem);
+    }
+
+    /* Sections */
+    .container {
+        padding: 0 1rem;
+    }
+
+    .education-section,
+    .experience-section,
+    .research-section,
+    .projects-section,
+    .contact-section {
+        padding-top: 0;
+    }
+
+    .card-header h3 {
+        white-space: normal;
+        word-wrap: break-word;
     }
 
     .news-container h2 {
@@ -1059,48 +1583,20 @@ body {
         font-size: 0.8rem;
     }
 
-    .card-header {
-        flex-direction: column;
-    }
-
     .card-links {
         margin-top: 0.5rem;
     }
 
-    .card-tag {
-        font-size: 0.8rem;
-    }
-
-    .card-logo {
-        position: relative;
-        top: auto;
-        right: auto;
-        margin-bottom: 0.8rem;
-        max-width: 70px;
-    }
-
-    .card-content {
-        padding-right: 0;
-    }
-
-    .card-content ul li {
-        white-space: normal;
-        /* Allow wrapping on mobile */
-    }
-
     .skills-grid {
         gap: 0.4rem;
-        /* Reduced from 0.75rem */
     }
 
     .skill-card {
         padding: 0.35rem 0.6rem;
-        /* Reduced from 0.75rem 1.25rem */
     }
 
     .contact-cards {
         grid-template-columns: 1fr;
-        /* Single column on mobile */
     }
 
     .contact-card {
@@ -1111,6 +1607,18 @@ body {
         width: 50px;
         height: 50px;
         font-size: 1.5rem;
+    }
+
+    .nav-brand .brand-link {
+        font-size: 1rem;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+    .nav-brand .brand-link {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.25rem;
     }
 }
 
@@ -1125,6 +1633,9 @@ body {
 .timeline-item.education:hover {
     background-color: rgba(230, 81, 0, 0.15);
     border-color: rgba(230, 81, 0, 1.0);
+}
+
+.education-card:hover {
     transform: scale(1.03);
 }
 
@@ -1139,7 +1650,17 @@ body {
 .timeline-item.work:hover {
     background-color: rgba(76, 175, 80, 0.15);
     border-color: rgba(76, 175, 80, 1.0);
+}
+
+.experience-card:hover {
     transform: scale(1.03);
+}
+
+@media (min-width: 1025px) {
+    .timeline-item.education:hover,
+    .timeline-item.work:hover {
+        transform: scale(1.03);
+    }
 }
 
 /* Project cards - light blue */
