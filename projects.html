@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Projects - Sachin Chhabra</title>
+    <meta name="description" content="Open-source machine learning projects by Sachin Chhabra — Vision Transformers, LLMs, GANs, and more built from scratch in PyTorch.">
+    <meta property="og:title" content="Projects - Sachin Chhabra">
+    <meta property="og:description" content="From-scratch PyTorch implementations of Vision Transformers, LLMs, GANs, and other ML projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://schh.xyz/projects.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Projects - Sachin Chhabra">
+    <meta name="twitter:description" content="From-scratch PyTorch implementations of Vision Transformers, LLMs, GANs, and other ML projects.">
+    <link rel="canonical" href="https://schh.xyz/projects.html">
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-brand"><a href="index.html" class="brand-link">Sachin Chhabra</a></div>
-        <ul class="nav-links" aria-label="Primary">
-            <li><a href="experience.html"><i class="fas fa-briefcase" aria-hidden="true"></i><span class="nav-label-long">Work Experience</span><span class="nav-label-short">Work</span></a></li>
-            <li><a href="education.html"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="nav-label-long">Education</span><span class="nav-label-short">Edu</span></a></li>
-            <li><a href="research.html"><i class="fas fa-microscope" aria-hidden="true"></i><span class="nav-label-long">Research</span><span class="nav-label-short">Research</span></a></li>
-            <li><a href="projects.html" class="active"><i class="fas fa-code-branch" aria-hidden="true"></i><span class="nav-label-long">Projects</span><span class="nav-label-short">Projects</span></a></li>
-            <li><a href="contact.html"><i class="fas fa-envelope" aria-hidden="true"></i><span class="nav-label-long">Contact</span><span class="nav-label-short">Contact</span></a></li>
-        </ul>
-    </nav>
+<body data-page="projects">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <div id="site-nav"></div>
+    <script src="js/site.js"></script>
 
-    <main>
+    <main id="main-content">
         <section class="projects-section">
             <div class="container">
                 <h1 class="page-title">Projects</h1>
@@ -29,7 +31,7 @@
                     <div class="card-header">
                         <h2>Vision Transformer (ViT) from Scratch in PyTorch</h2>
                         <div class="card-links">
-                            <a href="https://github.com/s-chh/PyTorch-Scratch-Vision-Transformer-ViT" target="_blank" class="card-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/s-chh/PyTorch-Scratch-Vision-Transformer-ViT" target="_blank" rel="noopener noreferrer" class="card-link"><i class="fab fa-github"></i> GitHub</a>
                             <span>150+ <i class="fas fa-star"></i></span>
                         </div>
                     </div>
@@ -52,7 +54,7 @@
                     <div class="card-header">
                         <h2>2D Positional Encodings for Vision Transformer</h2>
                         <div class="card-links">
-                            <a href="https://github.com/s-chh/2D-Positional-Encoding-Vision-Transformer" target="_blank" class="card-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/s-chh/2D-Positional-Encoding-Vision-Transformer" target="_blank" rel="noopener noreferrer" class="card-link"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                     <div class="card-content">
@@ -77,7 +79,7 @@
                     <div class="card-header">
                         <h2>Large Language Model (LLM) from Scratch in PyTorch</h2>
                         <div class="card-links">
-                            <a href="https://github.com/s-chh/PyTorch-Scratch-LLM" target="_blank" class="card-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/s-chh/PyTorch-Scratch-LLM" target="_blank" rel="noopener noreferrer" class="card-link"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                     <div class="card-content">
@@ -107,21 +109,21 @@
                     <div class="card-header">
                         <h2>Various Generative Adversarial Networks (GANs)</h2>
                         <div class="card-links">
-                            <a href="https://github.com/s-chh/PyTorch-GANs" target="_blank" class="card-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/s-chh/PyTorch-GANs" target="_blank" rel="noopener noreferrer" class="card-link"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                     <div class="card-content">
                         <p>Implemented several GAN variants from scratch for image generation and image translation with easy-to-understand code.</p>
                         <h3>Implemented Models:</h3>
                         <ul>
-                            <li>Vanilla GAN <a href="https://arxiv.org/abs/1406.2661" target="_blank" class="content-link"> Paper</a></li>
-                            <li>Deep Convolutional GAN (DCGAN) <a href="https://arxiv.org/abs/1511.06434" target="_blank" class="content-link"> Paper</a></li>
-                            <li>Least Squares GAN (LSGAN) <a href="https://arxiv.org/abs/1611.04076" target="_blank" class="content-link"> Paper</a></li>
-                            <li>Conditional GAN (cGAN) <a href="https://arxiv.org/abs/1411.1784" target="_blank" class="content-link"> Paper</a></li>
-                            <li>CycleGAN <a href="https://arxiv.org/abs/1703.10593" target="_blank" class="content-link"> Paper</a></li>
-                            <li>Wasserstein GAN (WGAN) <a href="https://arxiv.org/abs/1701.07875" target="_blank" class="content-link"> Paper</a></li>
-                            <li>Wasserstein GAN with Gradient Penalty (WGAN-GP) <a href="https://arxiv.org/abs/1704.00028" target="_blank" class="content-link"> Paper</a></li>
-                            <li>StarGAN <a href="https://arxiv.org/abs/1711.09020" target="_blank" class="content-link"> Paper</a></li>
+                            <li>Vanilla GAN <a href="https://arxiv.org/abs/1406.2661" target="_blank" rel="noopener noreferrer" class="content-link"> Paper</a></li>
+                            <li>Deep Convolutional GAN (DCGAN) <a href="https://arxiv.org/abs/1511.06434" target="_blank" rel="noopener noreferrer" class="content-link"> Paper</a></li>
+                            <li>Least Squares GAN (LSGAN) <a href="https://arxiv.org/abs/1611.04076" target="_blank" rel="noopener noreferrer" class="content-link"> Paper</a></li>
+                            <li>Conditional GAN (cGAN) <a href="https://arxiv.org/abs/1411.1784" target="_blank" rel="noopener noreferrer" class="content-link"> Paper</a></li>
+                            <li>CycleGAN <a href="https://arxiv.org/abs/1703.10593" target="_blank" rel="noopener noreferrer" class="content-link"> Paper</a></li>
+                            <li>Wasserstein GAN (WGAN) <a href="https://arxiv.org/abs/1701.07875" target="_blank" rel="noopener noreferrer" class="content-link"> Paper</a></li>
+                            <li>Wasserstein GAN with Gradient Penalty (WGAN-GP) <a href="https://arxiv.org/abs/1704.00028" target="_blank" rel="noopener noreferrer" class="content-link"> Paper</a></li>
+                            <li>StarGAN <a href="https://arxiv.org/abs/1711.09020" target="_blank" rel="noopener noreferrer" class="content-link"> Paper</a></li>
                         </ul>
                         <div class="card-tech">
                             <span class="card-tag">PyTorch</span>
@@ -137,7 +139,7 @@
                     <div class="card-header">
                         <h2>Duplicate Photos and Video Finder</h2>
                         <div class="card-links">
-                            <a href="https://github.com/s-chh/Find-Duplicate-Photos-Video" target="_blank" class="card-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/s-chh/Find-Duplicate-Photos-Video" target="_blank" rel="noopener noreferrer" class="card-link"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                     <div class="card-content">
@@ -175,10 +177,7 @@
         </section>
     </main>
 
-    <!-- <footer>
-        <div class="footer-content">
-            <p>&copy; Sachin Chhabra. All rights reserved.</p>
-        </div> -->
+    <div id="site-footer"></div>
 
     <script src="js/main.js"></script>
 </body>

@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Work Experience - Sachin Chhabra</title>
+    <meta name="description" content="Work experience of Sachin Chhabra — Machine Learning Scientist at Wayfair, ML internships, and prior industry roles at Accenture.">
+    <meta property="og:title" content="Work Experience - Sachin Chhabra">
+    <meta property="og:description" content="Machine Learning Scientist at Wayfair. Previous roles in ML research and software engineering.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://schh.xyz/experience.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Work Experience - Sachin Chhabra">
+    <meta name="twitter:description" content="Machine Learning Scientist at Wayfair. Previous roles in ML research and software engineering.">
+    <link rel="canonical" href="https://schh.xyz/experience.html">
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-brand"><a href="index.html" class="brand-link">Sachin Chhabra</a></div>
-        <ul class="nav-links" aria-label="Primary">
-            <li><a href="experience.html" class="active"><i class="fas fa-briefcase" aria-hidden="true"></i><span class="nav-label-long">Work Experience</span><span class="nav-label-short">Work</span></a></li>
-            <li><a href="education.html"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="nav-label-long">Education</span><span class="nav-label-short">Edu</span></a></li>
-            <li><a href="research.html"><i class="fas fa-microscope" aria-hidden="true"></i><span class="nav-label-long">Research</span><span class="nav-label-short">Research</span></a></li>
-            <li><a href="projects.html"><i class="fas fa-code-branch" aria-hidden="true"></i><span class="nav-label-long">Projects</span><span class="nav-label-short">Projects</span></a></li>
-            <li><a href="contact.html"><i class="fas fa-envelope" aria-hidden="true"></i><span class="nav-label-long">Contact</span><span class="nav-label-short">Contact</span></a></li>
-        </ul>
-    </nav>
+<body data-page="experience">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <div id="site-nav"></div>
+    <script src="js/site.js"></script>
 
-    <main>
+    <main id="main-content">
         <section class="experience-section">
             <div class="container">
                 <h1 class="page-title">Work Experience</h1>
@@ -35,19 +37,19 @@
                             <img src="assets/logos/wayfair-logo.png" alt="Wayfair Logo">
                         </div>
                         <p><strong>Wayfair, Mountain View, CA</strong></p>
-                        <p>Working on cutting-edge machine learning applications for e-commerce.</p>
+                        <p>Designing and building production-scale recommendation engines for e-commerce product discovery.</p>
                         <h3>Key Responsibilities:</h3>
                         <ul>
-                            <li>Developed a recommendation engine for images for improving user product discovery.</li>
+                            <li>Designed and developed a recommendation model for shoppable inspirational images to improve product discovery.</li>
                             <li>Designed a multi-task neural network for sales forecasting across multiple markets and stages of B2B customers.</li>
                             <li>Built Monitors for Features and Model performance.</li>
-                            <!-- <li>Build personalized image (reel-like) recommendation system.</li> -->
                         </ul>
                         <div class="card-tech">
                             <span class="card-tag">PyTorch</span>
                             <span class="card-tag">GCP</span>
-                            <span class="card-tag">Composer DAG</span>
-                            <span class="card-tag">Arize</span>
+                            <span class="card-tag">BigQuery</span>
+                            <span class="card-tag">Composer Airflow</span>
+                            <span class="card-tag">Vertex AI</span>
                         </div>
                     </div>
                 </div>
@@ -95,7 +97,7 @@
                             <li>Created a bipartite GNN with users and items to generate vector representations.</li>
                             <li>Utilized GNNs to encode products to an embedding space for effective recommendations.</li>
                         </ul>
-                        <p><a href="https://www.aboutwayfair.com/careers/tech-blog/wayfair-intern-sachin-chhabra-3-reasons-why-wayfair-is-an-incredible-place-for-science-interns" target="_blank" class="content-link">Read my internship blog post</a></p>
+                        <p><a href="https://www.aboutwayfair.com/careers/tech-blog/wayfair-intern-sachin-chhabra-3-reasons-why-wayfair-is-an-incredible-place-for-science-interns" target="_blank" rel="noopener noreferrer" class="content-link">Read my internship blog post</a></p>
                         <div class="card-tech">
                             <span class="card-tag">PyTorch</span>
                             <span class="card-tag">Deep Graph Library (DGL)</span>
@@ -116,7 +118,7 @@
                         <div class="card-logo">
                             <img src="assets/logos/systems-imagination-logo.png" alt="Systems Imagination Logo">
                         </div>
-                        <p><strong>Systems Imagination, Remote</strong></p>
+                        <p><strong>Systems Imagination, Tempe, AZ (Remote)</strong></p>
                         <p>Developed a hybrid neural network framework that processes time series and tabular data to predict COVID-19 case counts and risk for US counties.</p>
                         <h3>Key Achievements:</h3>
                         <ul>
@@ -160,11 +162,7 @@
         </section>
     </main>
 
-    <!-- <footer>
-        <div class="footer-content">
-            <p>&copy; Sachin Chhabra. All rights reserved.</p>
-        </div>
-    </footer> -->
+    <div id="site-footer"></div>
 
     <script src="js/main.js"></script>
 </body>
