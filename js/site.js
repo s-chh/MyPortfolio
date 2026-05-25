@@ -29,10 +29,16 @@ function applyNavActive(page) {
     });
 
     if (page === 'index') {
-        const brand = nav.querySelector('.brand-link');
-        brand?.classList.add('active');
-        brand?.setAttribute('aria-current', 'page');
-        nav.querySelector('.nav-home a')?.classList.add('active');
+        const homeTab = nav.querySelector('.nav-home a');
+        homeTab?.classList.add('active');
+
+        if (window.matchMedia('(min-width: 1025px)').matches) {
+            const brand = nav.querySelector('.brand-link');
+            brand?.classList.add('active');
+            brand?.setAttribute('aria-current', 'page');
+        } else {
+            homeTab?.setAttribute('aria-current', 'page');
+        }
         return;
     }
 
